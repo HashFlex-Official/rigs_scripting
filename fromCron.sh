@@ -9,4 +9,5 @@ curl   -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/HashFlex-O
 echo " "
 curl   -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/HashFlex-Official/rigs_scripting/master/`hostname`_overcklocking.sh >> ~/temp.sh
 echo " "
+echo " "
 echo "overclocking_override()" >> ~/temp.sh

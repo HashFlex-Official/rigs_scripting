@@ -21,3 +21,4 @@ overclocking(){
 	nvidia-smi -pl 100
 	nvidia-smi
 }
+
