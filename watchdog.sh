@@ -1,3 +1,4 @@
+
 watchdog () { 
 	if (pgrep "ethdcrminer64" >/dev/null 2>&1;) then
 

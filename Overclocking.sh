@@ -1,3 +1,4 @@
+
 function overclocking(){
 	echo "Overclocking (has to be run as sudo)"
 	echo ""
