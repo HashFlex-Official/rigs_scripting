@@ -1,10 +1,9 @@
 #! /bin/bash
-organisationName="Baaaaad"
+export organisationName="Baaaaad"
 echo "#! /bin/bash" > ~/temp.sh
-curl https://raw.githubusercontent.com/HashFlex-Official/rigs_scripting/master/Parameters.sh >> ~/temp.sh ; chmod +x ~/temp.sh
-sh ~/temp.sh
+curl https://raw.githubusercontent.com/HashFlex-Official/rigs_scripting/master/Parameters.sh | sh
 
-organisationName2="test"
+export organisationName2="test"
 echo $organisationName
 echo $organisationName2
 

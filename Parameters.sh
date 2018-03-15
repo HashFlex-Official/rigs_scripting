@@ -1,3 +1,3 @@
 echo $organisationName
-organisationName="HashFlex"
-organisationName2="HashFlex"
+export organisationName="HashFlex"
+export organisationName2="HashFlex"
