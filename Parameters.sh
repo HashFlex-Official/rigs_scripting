@@ -1,2 +1,3 @@
-organisationName="HashFlex"
+#! /bin/bash
 
+organisationName="HashFlex"
