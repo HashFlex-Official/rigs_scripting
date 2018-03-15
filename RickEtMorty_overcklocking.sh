@@ -1,5 +1,5 @@
 
-overclocking_override(){
+function overclocking_override(){
 	echo "Overclocking override for $hostname (has to be run as sudo)"
 	echo ""
 
