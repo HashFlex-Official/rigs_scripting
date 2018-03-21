@@ -18,7 +18,7 @@ overclocking(){
 	nvidia-settings -c :0 -a '[gpu:4]/GPUGraphicsClockOffset[3]=60'
 	nvidia-settings -c :0 -a '[gpu:5]/GPUGraphicsClockOffset[3]=60'
 
-	nvidia-smi -pl 100
+	nvidia-smi -pl "$voltageLimit"
 	nvidia-smi
 }
 

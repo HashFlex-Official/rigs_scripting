@@ -1,5 +1,5 @@
-overclocking(){
-  if ($`hostname`OverclockingOverride == 1) then
+startOverclocking(){
+  if ($OverclockingOverrideEnabled == 1) then
     echo ""
 	echo "Overclocking Override !"
 	echo ""
@@ -8,10 +8,8 @@ overclocking(){
     echo ""
 	echo "Overclocking !"
 	echo ""
-  
     overclocking
   fi
-
 }
 
 
@@ -55,12 +53,13 @@ watchdog () {
 
 	  fi
 	#NVML: cannot get current temperature, error 15
-
-	  if nvidia-smi | grep -io "/ 100W" >/dev/null 2>&1; then
+	$overclockingThresholdString = $voltageLimit+"W"
+	  if nvidia-smi | grep -io "/ $overclockingThresholdString" >/dev/null 2>&1; then
 			echo "$(date) Overclocking is correctly applied"
 		else
 		 echo "$(date) Overclocking is not set, overclock!"
-		 sh /home/cryptek/overclocking.sh
+		 #sh /home/cryptek/overclocking.sh
+		 startOverclocking
 		 if nvidia-smi | grep "Reboot the system to recover this GPU" >/dev/null 2>&1; then
 			echo "$(date) GPU is locked, Nvidia-SMI is not able to apply overclocking, RIG is going to reboot."
 			echo "$(date) GPU is locked, Nvidia-SMI is not able to apply overclocking, RIG is going to reboot." | mail -s "$(hostname) Miner WatchDog Restart" semias@gmail.com,toan.nguyen.doan@gmail.com
