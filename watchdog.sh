@@ -1,5 +1,5 @@
 overclocking(){
-  if ($`hostname`OverclockingOverride == 1)
+  if ($`hostname`OverclockingOverride == 1) then
     echo ""
 	echo "Overclocking Override !"
 	echo ""
