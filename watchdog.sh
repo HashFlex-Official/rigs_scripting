@@ -1,3 +1,19 @@
+overclocking(){
+  if ($`hostname`OverclockingOverride == 1)
+    echo ""
+	echo "Overclocking Override !"
+	echo ""
+    overclocking_override
+  else
+    echo ""
+	echo "Overclocking !"
+	echo ""
+  
+    overclocking
+  fi
+
+}
+
 
 watchdog () { 
 	if (pgrep "ethdcrminer64" >/dev/null 2>&1;) then
