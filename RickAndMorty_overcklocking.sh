@@ -21,3 +21,5 @@ overclocking_override(){
 	nvidia-smi -pl 100
 	nvidia-smi
 }
+
+
