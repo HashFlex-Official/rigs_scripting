@@ -1,15 +1,27 @@
 startOverclocking(){
-  if ($OverclockingOverrideEnabled == 1) then
+ if [ "$OverclockingOverrideEnabled" == "1" ]; then
     echo ""
 	echo "Overclocking Override !"
 	echo ""
-    overclocking_override
+	export voltageLimit=$voltageLimitOverride
+	export memoryGPU1=$memoryGPU1Override
+	export clockGPU1=$clockGPU1Override
+	export memoryGPU2=$memoryGPU2Override
+	export clockGPU2=$clockGPU2Override
+	export memoryGPU3=$memoryGPU3Override
+	export clockGPU3=$clockGPU3Override
+	export memoryGPU4=$memoryGPU4Override
+	export clockGPU4=$clockGPU4Override
+	export memoryGPU5=$memoryGPU5Override
+	export clockGPU5=$clockGPU5Override
+	export memoryGPU6=$memoryGPU6Override
+	export clockGPU6=$clockGPU6Override
   else
     echo ""
 	echo "Overclocking !"
 	echo ""
-    overclocking
   fi
+  overclocking
 }
 
 
@@ -53,7 +65,9 @@ watchdog () {
 
 	  fi
 	#NVML: cannot get current temperature, error 15
-	$overclockingThresholdString = $voltageLimit+"W"
+	export overclockingThresholdString="W"
+	export overclockingThresholdString=$voltageLimit$overclockingThresholdString
+	
 	  if nvidia-smi | grep -io "/ $overclockingThresholdString" >/dev/null 2>&1; then
 			echo "$(date) Overclocking is correctly applied"
 		else
