@@ -1,24 +1,16 @@
-
-overclocking_override(){
-	echo "Overclocking override for $hostname (has to be run as sudo)"
-	echo ""
-
-	sudo nvidia-smi -pm ENABLED
-
-	nvidia-settings -c :0 -a '[gpu:0]/GPUMemoryTransferRateOffset[3]=1000'
-	nvidia-settings -c :0 -a '[gpu:1]/GPUMemoryTransferRateOffset[3]=1000'
-	nvidia-settings -c :0 -a '[gpu:2]/GPUMemoryTransferRateOffset[3]=1000'
-	nvidia-settings -c :0 -a '[gpu:3]/GPUMemoryTransferRateOffset[3]=1000'
-	nvidia-settings -c :0 -a '[gpu:4]/GPUMemoryTransferRateOffset[3]=1000'
-	nvidia-settings -c :0 -a '[gpu:5]/GPUMemoryTransferRateOffset[3]=1000'
-	nvidia-settings -c :0 -a '[gpu:0]/GPUGraphicsClockOffset[3]=60'
-	nvidia-settings -c :0 -a '[gpu:1]/GPUGraphicsClockOffset[3]=60'
-	nvidia-settings -c :0 -a '[gpu:2]/GPUGraphicsClockOffset[3]=60'
-	nvidia-settings -c :0 -a '[gpu:3]/GPUGraphicsClockOffset[3]=60'
-	nvidia-settings -c :0 -a '[gpu:4]/GPUGraphicsClockOffset[3]=60'
-	nvidia-settings -c :0 -a '[gpu:5]/GPUGraphicsClockOffset[3]=60'
-
-	nvidia-smi -pl 100
-	nvidia-smi
-}
-
+export OverclockingOverrideEnabled=0
+# Check of overclocking is done on the voltageLimit
+# if we change memoryGPU1 but is we do not change the voltageLimit overclocking is not going to be applied
+export voltageLimitOverride="120"
+export memoryGPU1Override="1000"
+export clockGPU1Override="100"
+export memoryGPU2Override="1000"
+export clockGPU2Override="100"
+export memoryGPU3Override="1000"
+export clockGPU3Override="100"
+export memoryGPU4Override="1000"
+export clockGPU4Override="100"
+export memoryGPU5Override="1000"
+export clockGPU5Override="100"
+export memoryGPU6Override="1000"
+export clockGPU6Override="100"
