@@ -2,6 +2,8 @@ export organisationName="HashFlex online script"
 export organisationName2="======================"
 echo $organisationName
 echo $organisationName2
+
+export logPath="/tmp/watchdog.log"
 export voltageLimit="100"
 export memoryGPU1="1000"
 export clockGPU1="90"

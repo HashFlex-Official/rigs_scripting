@@ -1,7 +1,12 @@
 startOverclocking(){
+  overclocking
+}
+
+
+watchdog () { 
  if [ "$OverclockingOverrideEnabled" == "1" ]; then
     echo ""
-	echo "Overclocking Override !"
+	echo "Overclocking Override Detected !"
 	echo ""
 	export voltageLimit=$voltageLimitOverride
 	export memoryGPU1=$memoryGPU1Override
@@ -18,14 +23,9 @@ startOverclocking(){
 	export clockGPU6=$clockGPU6Override
   else
     echo ""
-	echo "Overclocking !"
 	echo ""
   fi
-  overclocking
-}
-
-
-watchdog () { 
+  
 	if (pgrep "ethdcrminer64" >/dev/null 2>&1;) then
 
 	 if tail -n16 /home/cryptek/claymore/log.txt | grep -io "cuda error\|error cuda" >/dev/null 2>&1;  then
