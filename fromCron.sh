@@ -16,7 +16,8 @@ echo " "
  wget -O -  https://raw.githubusercontent.com/HashFlex-Official/rigs_scripting/master/`hostname`_inc.sh >> ~/temp.sh
 echo " " >> ~/temp.sh 	
  echo "tail -n 1500 $logPath > /tmp/watchdogTemp.log; mv /tmp/watchdogTemp.log $logPath"  >> ~/temp.sh
-echo "exec >> $logPath 2>&1	" >> ~/temp.sh
+echo " "  >> ~/temp.sh
+ echo "exec >> $logPath 2>&1	" >> ~/temp.sh
 echo " "  >> ~/temp.sh
 echo "watchdog" >> ~/temp.sh
 echo " " >> ~/temp.sh
