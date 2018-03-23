@@ -4,7 +4,7 @@ startOverclocking(){
 
 
 watchdog () { 
- if [ "$OverclockingOverrideEnabled" == "1" ]; then
+ if [ "$OverclockingOverrideEnabled" = "1" ]; then
     echo ""
 	echo "Overclocking Override Detected !"
 	echo ""
