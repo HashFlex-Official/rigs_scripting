@@ -1,3 +1,5 @@
+
+
 startOverclocking(){
   overclocking
 }
@@ -7,7 +9,7 @@ watchdog () {
  if [ "$OverclockingOverrideEnabled" = "1" ]; then
     echo ""
 	echo "Overclocking Override Detected !"
-	echo "" 
+	echo "" 	
 	export voltageLimit=$voltageLimitOverride
 	export memoryGPU1=$memoryGPU1Override
 	export clockGPU1=$clockGPU1Override
