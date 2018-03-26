@@ -21,3 +21,5 @@ echo " "  >> ~/temp.sh
 echo " "  >> ~/temp.sh
 echo "watchdog" >> ~/temp.sh
 echo " " >> ~/temp.sh
+#fix to Invalid MIT-MAGIC-COOKIE-1 When “sudo”
+cp /home/cryptek/.Xauthority /root/.Xauthority

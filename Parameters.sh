@@ -4,7 +4,7 @@ echo $organisationName
 echo $organisationName2
 
 export logPath="/tmp/watchdog.log"
-export voltageLimit="100"
+export voltageLimit="101"
 export memoryGPU1="1000"
 export clockGPU1="100"
 export memoryGPU2="1000"
