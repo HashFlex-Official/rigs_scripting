@@ -5,7 +5,7 @@ export logPath="/tmp/watchdog.log"
 #echo "Arrêt du mining par manque de rentabilité." >> /tmp/watchdog.log
 
 #shutdown -h now 
-shutdown -r -t 1
+#shutdown -r -t 1			
 echo "#! /bin/sh" > ~/temp.sh
 echo " "
  wget -O -  https://raw.githubusercontent.com/HashFlex-Official/rigs_scripting/master/Parameters.sh >> ~/temp.sh
@@ -18,7 +18,7 @@ echo " "
 echo " "
  wget -O -  https://raw.githubusercontent.com/HashFlex-Official/rigs_scripting/master/`hostname`_inc.sh >> ~/temp.sh
 echo " " >> ~/temp.sh 	
- echo "tail -n 1500 $logPath > /tmp/watchdogTemp.log; mv /tmp/watchdogTemp.log $logPath"  >> ~/temp.sh
+ echo "tail -n 1500 $logPath > /tmp/watchdogTemp.log; m	v /tmp/watchdogTemp.log $logPath"  >> ~/temp.sh
 echo " "  >> ~/temp.sh
  echo "exec >> $logPath 2>&1	" >> ~/temp.sh
 echo " "  >> ~/temp.sh
