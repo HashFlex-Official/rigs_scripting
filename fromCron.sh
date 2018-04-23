@@ -5,7 +5,7 @@ export logPath="/tmp/watchdog.log"
 #echo "Arrêt du mining par manque de rentabilité." >> /tmp/watchdog.log
 
 #shutdown -h now 
-shutdown -r
+#shutdown -r
 			
 echo "#! /bin/sh" > ~/temp.sh
 echo " "
