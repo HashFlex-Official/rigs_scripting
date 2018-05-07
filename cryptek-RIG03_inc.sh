@@ -1,1 +1,1 @@
-reboot
+systemctl reboot
