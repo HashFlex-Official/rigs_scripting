@@ -87,6 +87,9 @@ watchdog () {
 	  fi
 	  
 	if [ "$systemType" = "Nvidia" ]; then
+		#fix to Invalid MIT-MAGIC-COOKIE-1 When “sudo”
+		cp /home/cryptek/.Xauthority /root/.Xauthority
+				
 		#NVML: cannot get current temperature, error 15
 		export overclockingThresholdString="W"
 		export overclockingThresholdString=$voltageLimit$overclockingThresholdString
