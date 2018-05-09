@@ -16,7 +16,7 @@ echo " "
 echo " "
  wget -O -  https://raw.githubusercontent.com/HashFlex-Official/rigs_scripting/master/`hostname`_inc.sh --no-check-certificate >> ~/temp.sh
 echo " " >> ~/temp.sh 	
- echo "tail -n 10000 $logPath > /tmp/watchdogTemp.log; m	v /tmp/watchdogTemp.log $logPath"  >> ~/temp.sh
+ echo "tail -n 10000 $logPath > /tmp/watchdogTemp.log; mv /tmp/watchdogTemp.log $logPath"  >> ~/temp.sh
 echo " "  >> ~/temp.sh
  echo "exec >> $logPath 2>&1	" >> ~/temp.sh
 echo " "  >> ~/temp.sh
