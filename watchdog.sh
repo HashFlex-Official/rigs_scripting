@@ -47,8 +47,28 @@ watchdog () {
 	echo ""
   fi
   
+  
 	if (pgrep "ethdcrminer64" >/dev/null 2>&1;) then
 
+	 if tail -n128 $claymoreLogFile | grep -io "Set global fail flag" >/dev/null 2>&1;  then
+
+			tail -n64 $claymoreLogFile > "/tmp/watchdog_error_$(date)"
+
+			# Kill all instances of ethminer
+			killall "ethdcrminer64"
+			ps aux | grep "mdS Mining" | awk '{print $2}' | xargs kill
+			echo "$(date) Miner requires restart due to error (Set global fail flag)"
+			# Send mail
+			echo "$(date) Miner requires restart due to errori (Set global fail flag)" | mail -s "$(hostname) Miner WatchDog Restart" semias@gmail.com,toan.nguyen.doan@gmail.com
+
+			# Restart mining rig
+			/sbin/shutdown 2 -f -r
+
+			# Abandon WatchDog
+			exit
+
+	  fi
+	  
 	 if tail -n16 $claymoreLogFile | grep -io "cuda error\|error cuda" >/dev/null 2>&1;  then
 
 			tail -n64 $claymoreLogFile > "/tmp/watchdog_error_$(date)"
@@ -67,6 +87,8 @@ watchdog () {
 			exit
 
 	  fi
+	  
+	  
 	 if tail -n16 $claymoreLogFile | grep -io "error 15" >/dev/null 2>&1;  then
 
 			tail -n64 $claymoreLogFile > "/tmp/watchdog_error_$(date)"
