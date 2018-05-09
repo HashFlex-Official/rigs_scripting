@@ -51,7 +51,7 @@ watchdog () {
 
 	 if tail -n16 $claymoreLogFile | grep -io "cuda error\|error cuda" >/dev/null 2>&1;  then
 
-			tail -n64 /home/cryptek/claymore/log.txt > "/tmp/watchdog_error_$(date)"
+			tail -n64 $claymoreLogFile > "/tmp/watchdog_error_$(date)"
 
 			# Kill all instances of ethminer
 			killall "ethdcrminer64"
