@@ -15,3 +15,5 @@ export clockGPU5Override="100"
 export memoryGPU6Override="1000"
 export clockGPU6Override="100"
 
+export claymoreFolder="/home/ricketmorty/claymore/"
+export claymoreRunScript="/home/ricketmorty/claymore/mine_full.sh"

@@ -3,6 +3,8 @@ export organisationName2="======================"
 echo $organisationName
 echo $organisationName2
 
+export claymoreFolder="/home/cryptek/claymore/"
+export claymoreRunScript="/home/cryptek/claymore/mine.sh"
 export logPath="/tmp/watchdog.log"
 export voltageLimit="101"
 export memoryGPU1="1000"
