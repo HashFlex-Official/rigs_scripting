@@ -6,15 +6,15 @@ export logPath="/tmp/watchdog.log"
 			
 echo "#! /bin/sh" > ~/temp.sh
 echo " "
- wget -O -  https://raw.githubusercontent.com/HashFlex-Official/rigs_scripting/master/Parameters.sh >> ~/temp.sh
+ wget -O -  https://raw.githubusercontent.com/HashFlex-Official/rigs_scripting/master/Parameters.sh --no-check-certificate >> ~/temp.sh
  echo " "
- wget -O -  https://raw.githubusercontent.com/HashFlex-Official/rigs_scripting/master/`hostname`_parameters.sh >> ~/temp.sh
+ wget -O -  https://raw.githubusercontent.com/HashFlex-Official/rigs_scripting/master/`hostname`_parameters.sh --no-check-certificate >> ~/temp.sh
  echo " "
- wget -O -  https://raw.githubusercontent.com/HashFlex-Official/rigs_scripting/master/watchdog.sh >> ~/temp.sh
+ wget -O -  https://raw.githubusercontent.com/HashFlex-Official/rigs_scripting/master/watchdog.sh --no-check-certificate >> ~/temp.sh
 echo " "
- wget -O -  https://raw.githubusercontent.com/HashFlex-Official/rigs_scripting/master/Overclocking.sh >> ~/temp.sh
+ wget -O -  https://raw.githubusercontent.com/HashFlex-Official/rigs_scripting/master/Overclocking.sh --no-check-certificate >> ~/temp.sh
 echo " "
- wget -O -  https://raw.githubusercontent.com/HashFlex-Official/rigs_scripting/master/`hostname`_inc.sh >> ~/temp.sh
+ wget -O -  https://raw.githubusercontent.com/HashFlex-Official/rigs_scripting/master/`hostname`_inc.sh --no-check-certificate >> ~/temp.sh
 echo " " >> ~/temp.sh 	
  echo "tail -n 10000 $logPath > /tmp/watchdogTemp.log; m	v /tmp/watchdogTemp.log $logPath"  >> ~/temp.sh
 echo " "  >> ~/temp.sh
