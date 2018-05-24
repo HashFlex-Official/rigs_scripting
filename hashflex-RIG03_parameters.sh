@@ -14,3 +14,4 @@ export memoryGPU5Override="1000"
 export clockGPU5Override="100"
 export memoryGPU6Override="1000"
 export clockGPU6Override="100"
+export nbrGPU=3

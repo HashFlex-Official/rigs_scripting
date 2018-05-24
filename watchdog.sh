@@ -137,7 +137,7 @@ watchdog () {
 		   fi
 
 
-		  if nvidia-smi -L | grep -io "GPU 5" >/dev/null 2>&1; then
+		  if nvidia-smi -L | grep -io "GPU $nbrGPU" >/dev/null 2>&1; then
 
 			echo "Miner already running."
 		  else

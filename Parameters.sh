@@ -20,6 +20,7 @@ export memoryGPU5="1000"
 export clockGPU5="100"
 export memoryGPU6="1000"
 export clockGPU6="100"
+export nbrGPU=5
 
 
 
