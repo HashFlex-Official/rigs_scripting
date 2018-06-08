@@ -26,11 +26,11 @@ echo "watchdog" >> ~/temp.sh
 echo " " >> ~/temp.sh
 
 echo "1.00" > /tmp/script_version
-	 if cat /tmp/script_version | grep -io "1.00" >/dev/null 2>&1;  then
-			# Kill all instances of ethminer
-			killall "ethdcrminer64"
-			ps aux | grep "mdS Mining" | awk '{print $2}' | xargs kill
-			echo "$(date) Miner has been (soft) restarted to apply change"
-			# Send mail
-			echo "$(date) Miner has been (soft) restarted to apply change" | mail -s "$(hostname) Miner WatchDog Soft Restart" semias@gmail.com,toan.nguyen.doan@gmail.com
-	 fi
+#	 if cat /tmp/script_version | grep -io "1.00" >/dev/null 2>&1;  then
+#			# Kill all instances of ethminer
+#			killall "ethdcrminer64"
+#			ps aux | grep "mdS Mining" | awk '{print $2}' | xargs kill
+#			echo "$(date) Miner has been (soft) restarted to apply change"
+#			# Send mail
+#			echo "$(date) Miner has been (soft) restarted to apply change" | mail -s "$(hostname) Miner WatchDog Soft Restart" semias@gmail.com,toan.nguyen.doan@gmail.com
+#	 fi
