@@ -1,5 +1,7 @@
 
 overclocking(){
+	cp /home/cryptek/.Xauthority .Xauthority
+	
 	echo "Overclocking is being to be applied (has to be run as sudo)"
 	echo "==========================================================="
 
