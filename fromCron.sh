@@ -4,7 +4,7 @@
 export logPath="/tmp/watchdog.log"
 #echo "HARD REBOOOOOT!" >> /tmp/watchdog.log
 # Restart mining rig
-#/sbin/shutdown 1 -f -r
+/sbin/shutdown 1 -f -r
 			
 echo "#! /bin/sh" > ~/temp.sh
 echo " "
