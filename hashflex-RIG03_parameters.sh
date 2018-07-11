@@ -1,7 +1,7 @@
 export OverclockingOverrideEnabled=0
 # Check of overclocking is done on the voltageLimit
 # if we change memoryGPU1 but is we do not change the voltageLimit overclocking is not going to be applied
-export voltageLimitOverride="120"
+export voltageLimitOverride="101"
 export memoryGPU1Override="1000"
 export clockGPU1Override="100"
 export memoryGPU2Override="1000"
