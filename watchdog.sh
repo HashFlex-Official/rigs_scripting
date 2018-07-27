@@ -166,7 +166,7 @@ watchdog () {
 			echo "$(date) Miner requires restart due to error  :  cudaGetDeviceCount returned error 10 " | mail -s "$(hostname) Miner WatchDog Restart" semias@gmail.com,toan.nguyen.doan@gmail.com
 
 			# Restart mining rig
-			/sbin/shutdown 2 -f -r
+			/sbin/shutdown 20 -f -r
 
 			# Abandon WatchDog
 			exit
