@@ -153,6 +153,27 @@ watchdog () {
 	fi	  
 	  
 	else
+		##if claymore crash on start (process is then never running)
+	 if tail -n4 $claymoreLogFile | grep -io "error 10" >/dev/null 2>&1;  then
+
+			tail -n64 $claymoreLogFile > "/tmp/watchdog_error_$(date)"
+
+			# Kill all instances of ethminer
+			killall "ethdcrminer64"
+			ps aux | grep "mdS Mining" | awk '{print $2}' | xargs kill
+			echo "$(date) Miner requires restart due to error : NVML: cannot get current temperature, error 15"
+			# Send mail
+			echo "$(date) Miner requires restart due to error  :  cudaGetDeviceCount returned error 10 " | mail -s "$(hostname) Miner WatchDog Restart" semias@gmail.com,toan.nguyen.doan@gmail.com
+
+			# Restart mining rig
+			/sbin/shutdown 2 -f -r
+
+			# Abandon WatchDog
+			exit
+
+	  fi
+	  
+	
 	  echo "$(date) Miner was not started. Starting Miner!"
 	#    if nvidia-smi -q | grep "75 %" >/dev/null 2>&1; then
 	  ps aux | grep "mdS Mining" | awk '{print $2}' | xargs kill  >/dev/null 2>&1
