@@ -16,14 +16,13 @@ fi
 
 if [ ! -e /home/cryptek/claymore/111 ]; then
 
-
+	touch /home/cryptek/claymore/111
 
 
 fi
 
 
 
-chmod +x $claymoreRunScript
 
 
 
