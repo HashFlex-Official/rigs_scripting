@@ -18,3 +18,4 @@ fi
 
 
 
+chmod +x $claymoreRunScript

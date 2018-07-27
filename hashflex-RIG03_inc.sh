@@ -23,7 +23,7 @@ fi
 
 
 
-
+chmod +x $claymoreRunScript
 
 
 

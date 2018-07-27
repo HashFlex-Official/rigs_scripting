@@ -17,5 +17,5 @@ fi
 
 
 
-
+chmod +x $claymoreRunScript
 
