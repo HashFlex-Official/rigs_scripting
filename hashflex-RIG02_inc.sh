@@ -28,6 +28,7 @@ if [ ! -e /home/cryptek/claymore/$scriptVersion ]; then
 	chmod +x $claymoreRunScript
 	ps aux | grep "mdS Mining" | awk '{print $2}' | xargs kill
 	echo "$(date) Miner script upgrade: $messageScriptUpgrade " | mail -s "$(hostname) Miner script upgrade: $messageScriptUpgrade" semias@gmail.com,toan.nguyen.doan@gmail.com
+    echo "version" >  /home/cryptek/claymore/$scriptVersion
 fi
 
 
