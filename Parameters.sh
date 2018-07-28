@@ -3,12 +3,15 @@ export organisationName2="======================"
 echo $organisationName
 echo $organisationName2
 
+export messageScriptUpgrade="Change LI value from 9 to 7"
+export scriptVersion="1"
+
 export claymoreFolder="/home/cryptek/claymore/"
 export claymoreRunScript="/home/cryptek/claymore/mine.sh"
 export claymoreLogFile="/home/cryptek/claymore/log.txt"
 export logPath="/tmp/watchdog.log"
 export voltageLimit="100"
-export livalue="9"
+export livalue="7"
 export memoryGPU1="700"
 export clockGPU1="70"
 export memoryGPU2="700"
