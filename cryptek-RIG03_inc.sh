@@ -1,4 +1,4 @@
-if [ ! -d "$/home/cryptek/claymore/newVersion" ]; then
+if [ ! -d "/home/cryptek/claymore/newVersion" ]; then
   # Control will enter here if $DIRECTORY doesn't exist.
 	cd /home/cryptek/claymore/
 	wget https://github.com/nanopool/Claymore-Dual-Miner/releases/download/v11.8/Claymore.s.Dual.Ethereum.Decred_Siacoin_Lbry_Pascal_Blake2s_Keccak.AMD.NVIDIA.GPU.Miner.v11.8.-.LINUX.tar.gz
